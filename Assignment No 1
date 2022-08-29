@@ -1,0 +1,100 @@
+/* Classes and object
+Design a class ‘Complex’with data members for real and imaginary part. 
+Provide default and Parameterized constructors.
+Write a program to perform arithmetic operations of two complex numbers. */
+import java.io.*;
+import java.util.Scanner;
+class Complex
+{
+    float real, imag;
+    Complex()
+    {
+      real=0;
+      imag=0;
+    }
+    Complex(float p1, float p2)
+    {
+        real=p1;
+        imag=p2;
+    }
+    public void add(Complex C1, Complex C2)
+    {
+        float r,i;
+              real = C1.real + C2.real;
+        imag = C1.imag + C2.imag;
+     
+    }
+    public void sub(Complex C1, Complex C2)
+    {
+        float r,i;
+        real = C1.real - C2.real;
+        imag = C1.imag - C2.imag;
+    }
+        public void mul(Complex C1, Complex C2)
+    {
+        float r,i;
+        real = (C1.real *C2.real ) - (C1.imag * C2.imag);
+        imag = ( C1.real *C2.imag) + ( C1.imag * C2.real);
+    }
+        public void div(Complex C1, Complex C2)
+    {
+        real = (((C1.real*C2.real)+(C1.imag*C2.imag))/((C2.real*C2.real)+(C2.imag*C2.imag)));
+        imag =((( C1.real * C2.imag ) - ( C1.imag * C2.real )) / ((C2.real* C2.real) + (C2.imag * C2.imag)));
+    }
+    public void display()
+    {
+        
+        System.out.println("Answer is: " + this.real + " + " + this.imag + "i" );
+    }
+}
+class JavaApplication1
+{
+      public static void main(String args[])
+      {
+          float num1, num2;
+          int choice,cont;
+          Scanner input = new Scanner(System.in);
+          
+          do
+          {
+          System.out.print("1.Addtion\n");
+          System.out.print("2.Subtraction\n");
+          System.out.print("3.Multiplication\n");
+          System.out.print("4.Division\n");
+          System.out.print("Enter your Choice\n");
+          choice = input.nextInt(); 
+          System.out.print("Enter the First no.\n");
+          num1 = input.nextInt(); 
+          num2 = input.nextInt(); 
+          Complex Obj1 = new Complex(num1,num2);
+          
+          System.out.print("Enter the Second no.\n");
+          num1 = input.nextInt(); 
+          num2 = input.nextInt(); 
+          Complex Obj2 = new Complex(num1,num2);
+          
+          Complex res = new Complex();
+          switch(choice)
+          {
+          case 1:
+                res.add(Obj1, Obj2);
+                res.display();
+                break;
+          case 2:
+              res.sub(Obj1,Obj2);
+              res.display();
+              break;
+          case 3:
+                res.mul(Obj1, Obj2);
+                res.display();
+                break;
+          case 4:
+                res.div(Obj1, Obj2);
+                res.display();
+          }
+          System.out.print("Do you want to continue Press 1 for yes: \n");
+         cont = input.nextInt(); 
+          }while(cont==1);
+          
+      }
+}

@@ -98,3 +98,60 @@ class JavaApplication1
           
       }
 }
+/* OUTPUT
+
+run:
+1.Addtion
+2.Subtraction
+3.Multiplication
+4.Division
+Enter your Choice
+1
+Enter the First no.
+10 20
+Enter the Second no.
+10 20
+Answer is: 20.0 + 40.0i
+Do you want to continue Press 1 for yes: 
+1
+1.Addtion
+2.Subtraction
+3.Multiplication
+4.Division
+Enter your Choice
+2
+Enter the First no.
+20 10
+Enter the Second no.
+10 5
+Answer is: 10.0 + 5.0i
+Do you want to continue Press 1 for yes: 
+1
+1.Addtion
+2.Subtraction
+3.Multiplication
+4.Division
+Enter your Choice
+3
+Enter the First no.
+2 5
+Enter the Second no.
+4 -3
+Answer is: 23.0 + 14.0i
+Do you want to continue Press 1 for yes: 
+1
+1.Addtion
+2.Subtraction
+3.Multiplication
+4.Division
+Enter your Choice
+4
+Enter the First no.
+5 1
+Enter the Second no.
+0 2
+Answer is: 0.5 + 2.5i
+Do you want to continue Press 1 for yes: 
+2
+BUILD SUCCESSFUL (total time: 2 minutes 21 seconds)
+*/
